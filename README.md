@@ -30,6 +30,18 @@ npm run preview    # serve the production build
 
 Components never hardcode business details or image URLs — edit the data files and the whole site updates.
 
+## Concept build
+
+This is currently a **concept / proposal** site by Leou. While `concept.enabled` is `true` in `src/data/site.ts`:
+
+- every page shows the disclaimer strip, and the footer carries the full statement — *“Concept website created by Leou for presentation/proposal purposes. This website is not affiliated with or endorsed by F2A Cars.”*
+- search engines are asked not to index the site (`noindex`), and no business structured data or sitemap is published
+- forms say they are demos and send nothing
+
+Set `concept.enabled` to `false` only if F2A adopts the site.
+
+**Deployment:** Vercel project `dicta2/f2-a`, production at https://f2-a.vercel.app — every push to `main` deploys (settings pinned in `vercel.json`).
+
 ## Before launch
 
 - [ ] **Connect form submissions.** Forms validate and show success states, but `submitForm()` is simulated — *nothing is delivered yet*. Connect Supabase and/or an email/CRM function (see below).
