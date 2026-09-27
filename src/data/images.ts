@@ -50,7 +50,7 @@ export const images = {
   },
 
   services: {
-    buy: unsplash('1691795680273-cb411e618dbd', 'White Porsche 911 parked in front of a building'),
+    buy: unsplash('1691795680273-cb411e618dbd', 'White Porsche 911 Turbo S parked in front of a building'),
     sell: unsplash('1761014586544-53fe5e1f1e25', 'Hands exchanging a car key'),
     trade: unsplash('1612610683796-3b7d3a65df3d', 'White BMW Z4 on a city street at night'),
     consign: unsplash('1624006599899-3a6e02a2c64f', 'White sports coupe with its headlights on at night'),
@@ -72,8 +72,8 @@ export const images = {
     hiaceRear: unsplash('1650807486050-a142ea418b19', 'Rear of a white Toyota HiAce Premio van'),
     gClassBlack: unsplash('1648413653819-7c0fd93e8e6a', 'Black Mercedes-AMG G 63 on a wet track'),
     gClassBlack2: unsplash('1648413653877-ade5eefd2f1b', 'Black Mercedes-AMG G 63 in front of snowy mountains'),
-    porscheWhite: unsplash('1691795680273-cb411e618dbd', 'White Porsche 911 parked in front of a building'),
-    rangeRoverWhite: unsplash('1638686302275-0e87df720aca', 'White Range Rover parked beside autumn trees'),
+    porscheWhite: unsplash('1691795680273-cb411e618dbd', 'White Porsche 911 Turbo S parked in front of a building'),
+    rangeRoverWhite: unsplash('1638686302275-0e87df720aca', 'White Range Rover Sport parked beside autumn trees', '50% 85%'),
     // Unbranded detail shots shared by sample listings
     dashboard: unsplash('1667893591090-19729ae8fee3', 'Instrument cluster and steering wheel'),
     cluster: unsplash('1611099711902-1228419f7113', 'Illuminated instrument cluster'),
@@ -98,21 +98,21 @@ export type GalleryCategory = 'SPORTS' | 'LUXURY' | 'SUV' | 'PICKUP' | 'VAN' | '
 
 export const galleryCategories: GalleryCategory[] = ['SPORTS', 'LUXURY', 'SUV', 'PICKUP', 'VAN', 'PERFORMANCE']
 
-/** Automotive gallery — vehicle types seen on the F2A feed. Placeholder photography until F2A supplies its own. */
-export const gallery: { image: ImageAsset; category: GalleryCategory; tall?: boolean }[] = [
-  { category: 'PERFORMANCE', tall: true, image: unsplash('1658162083129-5e008c4e5747', 'White Nissan Skyline GT-R on a wet road') },
+/** Automotive gallery — vehicle types seen on the F2A feed. Placeholder photography until F2A supplies its own. Tile sizes are automatic (lib/bento.ts). */
+export const gallery: { image: ImageAsset; category: GalleryCategory }[] = [
+  { category: 'PERFORMANCE', image: unsplash('1658162083129-5e008c4e5747', 'White Nissan Skyline GT-R on a wet road') },
   { category: 'SPORTS', image: unsplash('1655628266959-12ec3f839a46', 'White Ford Mustang GT at sunset') },
-  { category: 'LUXURY', image: unsplash('1691795680273-cb411e618dbd', 'White Porsche 911 parked in front of a building') },
-  { category: 'PICKUP', tall: true, image: unsplash('1758393605683-e28bb39d8917', 'Black Toyota Hilux GR Sport pickup with a snorkel') },
+  { category: 'LUXURY', image: unsplash('1691795680273-cb411e618dbd', 'White Porsche 911 Turbo S parked in front of a building') },
+  { category: 'PICKUP', image: unsplash('1758393605683-e28bb39d8917', 'Black Toyota Hilux GR Sport pickup with a snorkel') },
   { category: 'SUV', image: unsplash('1709620435533-56483034bdd4', 'White Toyota Land Cruiser parked on a beach') },
   { category: 'VAN', image: unsplash('1671281367997-29a7e3df7d99', 'White Volkswagen Caddy van at night') },
-  { category: 'SPORTS', tall: true, image: unsplash('1564233890277-c5c9618b7e63', 'Black Subaru BRZ coupe') },
-  { category: 'LUXURY', image: unsplash('1638686302275-0e87df720aca', 'White Range Rover parked beside autumn trees') },
+  { category: 'SPORTS', image: unsplash('1564233890277-c5c9618b7e63', 'Black Subaru BRZ coupe') },
+  { category: 'LUXURY', image: unsplash('1638686302275-0e87df720aca', 'White Range Rover Sport parked beside autumn trees', '50% 85%') },
   { category: 'PERFORMANCE', image: unsplash('1584273421792-84b448728b38', 'Black Nissan GT-R beside a chain-link fence') },
   { category: 'PICKUP', image: unsplash('1644902166413-b883bc021fd1', 'White Ford F-150 Raptor on a dirt road') },
-  { category: 'SUV', tall: true, image: unsplash('1554841649-de947c4b954a', 'Vintage Toyota Land Cruiser in the desert') },
+  { category: 'SUV', image: unsplash('1554841649-de947c4b954a', 'Vintage Toyota Land Cruiser in the desert') },
   { category: 'SPORTS', image: unsplash('1552519507-da3b142c6e3d', 'Blue Chevrolet Camaro coupe') },
-  { category: 'LUXURY', tall: true, image: unsplash('1648413653819-7c0fd93e8e6a', 'Black Mercedes-Benz G-Class on a wet track') },
+  { category: 'LUXURY', image: unsplash('1648413653819-7c0fd93e8e6a', 'Black Mercedes-Benz G-Class on a wet track') },
   { category: 'VAN', image: unsplash('1650807486050-a142ea418b19', 'Rear of a white Toyota HiAce van') },
   { category: 'PERFORMANCE', image: unsplash('1618782657774-e5d6625a980f', 'White widebody Nissan GT-R with a large rear wing') },
   { category: 'PICKUP', image: unsplash('1631377875413-b1e3e660bfa2', 'Silver Toyota Hilux on a dirt road') },

@@ -3,12 +3,13 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "F2A CARS — premium digital showroom and F2A Vlogs hub.",
+  "description": "F2A CARS \u2014 premium digital showroom and F2A Vlogs hub.",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check": "node --experimental-strip-types --no-warnings scripts/check-bento.ts"
   },
   "engines": {
     "node": ">=20.19"
