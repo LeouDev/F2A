@@ -39,7 +39,7 @@ export function Hero() {
             lines={[
               'Find your',
               <>
-                Next ride<span className="text-f2a">.</span>
+                next ride<span className="text-f2a">.</span>
               </>,
             ]}
           />
