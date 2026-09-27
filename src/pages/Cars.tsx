@@ -131,7 +131,7 @@ export default function Cars() {
         {all.some((v) => v.sample) && <SampleNotice className="mb-8" />}
 
         {/* Toolbar */}
-        <div className="sticky top-[72px] z-20 -mx-5 border-y border-white/10 bg-ink/90 px-5 py-4 backdrop-blur-xl sm:-mx-8 sm:px-8 lg:top-20 lg:mx-0 lg:border-x lg:px-5">
+        <div className="sticky top-[calc(72px_+_var(--banner-h))] z-20 -mx-5 border-y border-white/10 bg-ink/90 px-5 py-4 backdrop-blur-xl sm:-mx-8 sm:px-8 lg:top-[calc(5rem_+_var(--banner-h))] lg:mx-0 lg:border-x lg:px-5">
           <div className="flex flex-wrap items-center gap-3">
             <label className="relative min-w-0 flex-1 basis-60">
               <span className="sr-only">Search make or model</span>
@@ -166,7 +166,7 @@ export default function Cars() {
 
         <div className="mt-8 grid gap-10 lg:grid-cols-[16.5rem_minmax(0,1fr)] xl:gap-14">
           <aside aria-label="Filters" className="hidden lg:block">
-            <div className="sticky top-44">
+            <div className="sticky top-[calc(11rem_+_var(--banner-h))]">
               <div className="mb-7 flex items-center justify-between">
                 <h2 className="headline text-3xl">Filters</h2>
                 {active.length > 0 && (

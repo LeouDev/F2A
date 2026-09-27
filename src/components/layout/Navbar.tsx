@@ -6,6 +6,7 @@ import { cn } from '../../lib/cn'
 import { useInquiry } from '../inquiry/inquiryContext'
 import { Button } from '../ui/Button'
 import { Logo } from '../ui/Logo'
+import { ConceptStrip } from './ConceptStrip'
 import { MobileMenu } from './MobileMenu'
 
 export function Navbar() {
@@ -28,6 +29,7 @@ export function Navbar() {
         scrolled ? 'border-white/10 bg-ink/80 backdrop-blur-xl' : 'border-transparent bg-transparent',
       )}
     >
+      <ConceptStrip />
       {/* Legibility over bright hero images before the bar turns solid */}
       <div aria-hidden className={cn('pointer-events-none absolute inset-x-0 top-0 -z-10 h-32 bg-gradient-to-b from-black/60 to-transparent transition-opacity duration-500', scrolled && 'opacity-0')} />
       <div className="container-site flex h-[72px] items-center justify-between gap-6 lg:h-20">

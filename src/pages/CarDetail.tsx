@@ -17,7 +17,7 @@ import { carJsonLd, Seo } from '../lib/seo'
 import { useAsync } from '../lib/useAsync'
 
 function Shell({ children }: { children: ReactNode }) {
-  return <div className="container-site pb-24 pt-28 lg:pb-32 lg:pt-32">{children}</div>
+  return <div className="container-site pb-24 pt-[calc(7rem_+_var(--banner-h))] lg:pb-32 lg:pt-[calc(8rem_+_var(--banner-h))]">{children}</div>
 }
 
 function DetailSkeleton() {
@@ -161,7 +161,7 @@ export default function CarDetail() {
           </div>
 
           <aside className="lg:col-span-5 xl:col-span-4" aria-label="Vehicle summary">
-            <div className="lg:sticky lg:top-28">
+            <div className="lg:sticky lg:top-[calc(7rem_+_var(--banner-h))]">
               <div className="flex gap-2">
                 <StatusBadge status={vehicle.status} />
                 {vehicle.sample && <SampleBadge />}
@@ -270,7 +270,7 @@ export default function CarDetail() {
           </div>
 
           <aside className="lg:col-span-4 lg:col-start-9 xl:col-span-4" aria-label="Talk to F2A">
-            <div className="border border-white/10 bg-carbon p-6 sm:p-8 lg:sticky lg:top-28">
+            <div className="border border-white/10 bg-carbon p-6 sm:p-8 lg:sticky lg:top-[calc(7rem_+_var(--banner-h))]">
               <p className="eyebrow text-f2a-hot">Talk to F2A</p>
               <p className="headline mt-4 text-4xl">Questions about this car?</p>
               <p className="mt-4 text-sm leading-relaxed text-muted">“{brand.aftersales}” Reach F2A directly — before and after you buy.</p>

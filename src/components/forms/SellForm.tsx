@@ -98,7 +98,7 @@ export function SellForm() {
   const photoCount = Object.keys(photos).length
 
   return (
-    <div ref={top} tabIndex={-1} className="scroll-mt-28 border border-white/10 bg-carbon outline-none">
+    <div ref={top} tabIndex={-1} className="scroll-mt-[calc(7rem_+_var(--banner-h))] border border-white/10 bg-carbon outline-none">
       {/* Progress */}
       <div className="border-b border-white/10 p-6 sm:px-10 sm:py-8">
         <ol className="grid grid-cols-5 gap-2">

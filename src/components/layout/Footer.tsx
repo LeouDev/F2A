@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
-import { brand, footerNav, site, socialLinks } from '../../data/site'
+import { brand, concept, footerNav, site, socialLinks } from '../../data/site'
 import { socialProof } from '../../data/socialProof'
 import { formatDate } from '../../lib/format'
 import { BrandIcon, type Brand } from '../ui/Icons'
@@ -118,6 +118,15 @@ export function Footer() {
             Facebook figures as listed on the {socialProof.source} ({formatDate(socialProof.asOf)}); they may change over time.
           </p>
         </div>
+        {concept.enabled && (
+          <p className="mt-6 border-t border-white/10 pt-6 text-xs leading-relaxed text-white/60">
+            Concept website created by{' '}
+            <a href={concept.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-white underline underline-offset-4">
+              {concept.author}
+            </a>{' '}
+            {concept.purpose}. {concept.disclaimer}
+          </p>
+        )}
       </div>
     </footer>
   )

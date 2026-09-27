@@ -11,8 +11,8 @@ import {
   type TextareaHTMLAttributes,
 } from 'react'
 import { m } from 'framer-motion'
-import { Check, ChevronDown, CircleAlert, LoaderCircle } from 'lucide-react'
-import { site } from '../../data/site'
+import { Check, ChevronDown, CircleAlert, Info, LoaderCircle } from 'lucide-react'
+import { concept, site } from '../../data/site'
 import { cn } from '../../lib/cn'
 import { readForm, type FormApi } from '../../lib/useForm'
 import { Button } from './Button'
@@ -51,6 +51,12 @@ export function Form({ form, onValid, beforeSubmit, className, children, ...rest
         className={className}
         {...rest}
       >
+        {concept.enabled && (
+          <p className="flex gap-2.5 border border-white/10 bg-white/[0.03] px-4 py-3 text-xs leading-relaxed text-white/65 sm:col-span-2">
+            <Info className="mt-px size-3.5 shrink-0 text-f2a-hot" aria-hidden />
+            Concept demo — this form isn’t connected, so nothing you enter is sent or stored.
+          </p>
+        )}
         {children}
       </form>
     </FormContext.Provider>
@@ -306,7 +312,7 @@ export function SuccessPanel({ title = 'Thank you.', children, actions }: { titl
       <div className="max-w-md space-y-2 text-lg leading-relaxed text-white/75">{children}</div>
       {actions && <div className="flex flex-wrap gap-3">{actions}</div>}
       <p className="text-sm text-muted">
-        Need a faster answer? Call{' '}
+        {concept.enabled ? 'Concept demo — nothing was sent. To reach F2A Cars, call ' : 'Need a faster answer? Call '}
         <a href={site.phone.href} className="text-white underline underline-offset-4">
           {site.phone.display}
         </a>{' '}

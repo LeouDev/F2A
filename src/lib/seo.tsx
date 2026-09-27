@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router'
-import { site } from '../data/site'
+import { concept, site } from '../data/site'
 import type { Vehicle } from '../data/vehicles'
 import { vehicleTitle } from './format'
 
@@ -53,7 +53,7 @@ export function Seo({ title, description = site.description, image = DEFAULT_IMA
     const img = absolute(image)
     document.title = title
     setMeta('name', 'description', description)
-    setMeta('name', 'robots', noindex ? 'noindex, follow' : 'index, follow')
+    setMeta('name', 'robots', concept.enabled ? 'noindex, nofollow' : noindex ? 'noindex, follow' : 'index, follow')
     setMeta('property', 'og:title', title)
     setMeta('property', 'og:description', description)
     setMeta('property', 'og:type', type)

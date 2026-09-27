@@ -30,6 +30,20 @@ export const site = {
   messenger: 'https://m.me/F2Acars',
 }
 
+/**
+ * Concept build — this site is a proposal by Leou, not an official F2A website.
+ * While `enabled`: every page shows the disclaimer, search engines are asked not to index the site,
+ * forms say nothing is sent, and no business structured data is published.
+ * Set `enabled: false` only if F2A adopts the site.
+ */
+export const concept = {
+  enabled: true,
+  author: 'Leou',
+  url: 'https://alvn-built-by-leou.vercel.app/',
+  purpose: 'for presentation/proposal purposes',
+  disclaimer: 'This website is not affiliated with or endorsed by F2A Cars.',
+}
+
 /** Official social profiles (supplied by F2A). `null` = not available; the UI then shows that button as unavailable. Never guess URLs. */
 export const socialLinks: Record<'facebook' | 'youtube' | 'tiktok', string | null> = {
   facebook: 'https://www.facebook.com/F2Acars',
